@@ -1,38 +1,39 @@
 @import "../App.scss";
 
-.navbar-top{
+.navbar-top {
     height: 38px;
     border-top: 1px solid $clr-dark;
 }
 
-.navbar-main{
+.navbar-main {
     padding-top: 28px;
 
-    &-top{
-        .navbar-brand{
-            span{
-                @media screen and (max-width: 992px){
+    &-top {
+        .navbar-brand {
+            span {
+                @media screen and (max-width: 992px) {
                     font-size: 24px;
                 }
 
-                @media screen and (max-width: 768px){
+                @media screen and (max-width: 768px) {
                     font-size: 20px;
                 }
             }
-            
+
         }
 
-        .navbar-search-form{
+        .navbar-search-form {
             width: 600px;
 
-            @media(max-width: 992px){
+            @media(max-width: 992px) {
                 display: none;
             }
         }
 
-        .basket-btn{
+        .basket-btn {
             position: relative;
-            .basket-count{
+
+            .basket-count {
                 position: absolute;
                 top: -5px;
                 right: -8px;
@@ -46,46 +47,48 @@
             }
         }
 
-        .navbar-basket{
-            .basket-count{
+        .navbar-basket {
+            .basket-count {
                 margin-left: 22px;
             }
-            .basket-count-value{
+
+            .basket-count-value {
                 margin-left: 8px;
             }
         }
     }
 
-    &-bottom{
+    &-bottom {
         margin-top: 20px;
         border-top: 2px dashed rgba(255, 255, 255, 0.2);
 
-        .navbar-cats-btn{
+        .navbar-cats-btn {
             margin-right: 20px;
         }
 
-        .navbar-nav{
-            .nav-item{
+        .navbar-nav {
+            .nav-item {
                 margin-left: 16px;
                 position: relative;
-                .nav-link{
+
+                .nav-link {
                     text-transform: uppercase;
                     font-weight: 400;
                     font-size: 13px;
                     color: $clr-white;
                     letter-spacing: 0.5px;
 
-                    &:hover{
+                    &:hover {
                         color: $clr-yellow;
                     }
                 }
 
-                &-active{
-                    .nav-link{
+                &-active {
+                    .nav-link {
                         color: $clr-yellow;
                     }
 
-                    &::after{
+                    &::after {
                         content: "";
                         position: absolute;
                         top: calc(100% + 4px);
@@ -97,22 +100,22 @@
                 }
             }
 
-            @media screen and (max-width: 992px){
+            @media screen and (max-width: 992px) {
                 display: none;
             }
         }
     }
 
-    .navbar-cats-wrapper{
+    .navbar-cats-wrapper {
         position: relative;
 
-        .navbar-cats-btn{
+        .navbar-cats-btn {
             cursor: pointer;
             padding-right: 20px;
             padding-left: 20px;
         }
 
-        .category-list{
+        .category-list {
             position: absolute;
             top: 100%;
             left: 0;
@@ -125,32 +128,33 @@
             transform: translateY(-100%);
             z-index: -1;
 
-            &.show-category-list{
+            &.show-category-list {
                 z-index: 1;
-                transform: translateY(0)!important;
+                transform: translateY(0) !important;
             }
 
             &::-webkit-scrollbar {
                 width: 6px;
             }
-               
+
             &::-webkit-scrollbar-track {
                 border-radius: 6px;
                 box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
             }
-               
+
             &::-webkit-scrollbar-thumb {
                 background-color: rgb(194, 194, 194);
                 border-radius: 6px;
             }
 
-            .category-item{
+            .category-item {
                 padding: 7px 0;
                 border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
 
-                &-link{
+                &-link {
                     transition: $transition-default;
-                    &:hover{
+
+                    &:hover {
                         color: $clr-primary;
                     }
                 }
@@ -158,6 +162,24 @@
         }
     }
 
-    
-    
+
+
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    /* Add your desired styles for the navbar */
+}
+
+.navbar.navbar-fixed {
+    position: fixed;
+    transition: top 0.3s;
+}
+
+.navbar.navbar-fixed.scrolled {
+    top: -100px;
+    /* Adjust the value to hide the navbar when scrolling */
 }

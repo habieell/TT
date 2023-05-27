@@ -6,12 +6,14 @@ import { AuthContext } from './context/authContext';
 import ProtectedRoute from './routers/ProtectedRoute';
 import PublicRoute from './routers/PublicRoute';
 import { useContext } from 'react';
+import CustomCursor from './cursor/customcursor.jsx';
 
 function App() {
   const { authData } = useContext(AuthContext);
 
   return (
     <Router>
+      <CustomCursor/>
         <Navbar />
         <Routes>
             {/* Protected routes */}
