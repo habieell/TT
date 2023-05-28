@@ -7,6 +7,8 @@ import './AboutUs.css';
 function AboutUsPage({ toggleNavbar }) {
   const navigate = useNavigate();
 
+  
+
   const handleLogoClick = () => {
     toggleNavbar(true); 
     navigate('/');

@@ -66,10 +66,10 @@ const ProductSinglePage = () => {
       </div>
       {/* end of shopping basket alert */}
       <div className='container'>
-        <div className='sc-wrapper py-5'>
+        <div className='sc-wrapper '>
           <div className='product-s bg-white grid'>
             <div className='product-s-img'>
-              <div className='img-preview py-5'>
+              <div className='img-preview'>
                 <div className='img-preview-zoom'>
                   <img src = {singleProduct?.images ? singleProduct.images[previewImg] ? singleProduct.images[previewImg]: images.no_image : images.no_image} alt = {singleProduct?.title} className = "img-cover" />
                 </div>

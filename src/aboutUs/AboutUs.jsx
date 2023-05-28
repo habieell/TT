@@ -1,39 +1,44 @@
 import React from "react";
 import ContactItem from "./ContactItem";
 import "./AboutUs.css";
+import arip from "./poto/arip.jpg"
+import habil from "./poto/habil.jpeg"
+import rici from "./poto/rici.jpeg"
+import zita from "./poto/arip.jpg"
 
 const Contact = [
   {
     name: "Aripp",
-    imgURL:
-      "",
-    NIM:"NIM: 00000074763",
+    imgURL: arip,
+    NIM:"NIM: 00000073943",
     desc:
-      "Bujug sang destroyer.",
+      "Bujug sang destroyer",
+    desc2:"Disebelah kanan saya, atasan saya →"
   },
   {
-    name: "Habill",
-    imgURL:
-      "",
+    name: "Habieell",
+    imgURL:habil,
       NIM:"NIM: 00000073909",
     desc:
-      "lorem ipsum",
+      "Sang legenda link, penemu, pencetus rumus Error = Ga tidur.",
+    desc2:"TIDUR HANYA UNTUK ORANG SEHAT, SAYA TIDAK."
   },
   {
     name: "Zitaa",
     imgURL:
       "",
-      NIM:"NIM: 00000074763",
+      NIM:"NIM: 00000075267",
     desc:
       "lorem ipsum",
+    desc2:""
   },
   {
     name: "Ricii",
-    imgURL:
-      "",
+    imgURL: rici,
       NIM:"NIM: 00000074763",
     desc:
       "lorem ipsum",
+    desc2:""
   }
 ];
 

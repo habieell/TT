@@ -1,10 +1,5 @@
 @import "../App.scss";
 
-.navbar-top {
-    height: 38px;
-    border-top: 1px solid $clr-dark;
-}
-
 .navbar-main {
     padding-top: 28px;
 
@@ -171,7 +166,6 @@
     top: 0;
     width: 100%;
     z-index: 100;
-    /* Add your desired styles for the navbar */
 }
 
 .navbar.navbar-fixed {

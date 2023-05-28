@@ -1,22 +1,36 @@
 @import "../App.scss";
 
-.page-not-found{
-    .page-not-found-img{
-        width: 120px;
-    }
-    .btn-back-to-home{
-        display: block;
-        background-color: $clr-primary;
-        color: $clr-white;
-        padding: 7px 15px;
-        margin-top: 8px;
-        max-width: 190px;
-        margin-right: auto;
-        margin-left: auto;
-        transition: $transition-default;
+.page-not-found {
+  margin-top: 120px;
 
-        &:hover{
-            background-color: $clr-black;
-        }
+  .page-not-found-img {
+    width: 120px;
+    max-width: 100%;
+  }
+
+  .btn-back-to-home {
+    display: block;
+    background-color: $clr-primary;
+    color: $clr-white;
+    padding: 7px 15px;
+    margin-top: 8px;
+    max-width: 190px;
+    margin-right: auto;
+    margin-left: auto;
+    transition: $transition-default;
+
+    &:hover {
+      background-color: $clr-black;
     }
+  }
+
+  @media screen and (max-width: 576px) {
+    margin-top: 80px;
+    text-align: center;
+
+    .btn-back-to-home {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
 }
