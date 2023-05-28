@@ -21,7 +21,7 @@ const Contact = [
       NIM:"NIM: 00000073909",
     desc:
       "Sang legenda link, penemu, pencetus rumus Error = Ga tidur.",
-    desc2:"TIDUR HANYA UNTUK ORANG SEHAT, SAYA TIDAK."
+    desc2:"😪😪😪😪😪"
   },
   {
     name: "Zitaa",
@@ -29,7 +29,7 @@ const Contact = [
       "",
       NIM:"NIM: 00000075267",
     desc:
-      "lorem ipsum",
+      "--",
     desc2:""
   },
   {
@@ -37,7 +37,7 @@ const Contact = [
     imgURL: rici,
       NIM:"NIM: 00000074763",
     desc:
-      "lorem ipsum",
+      "---",
     desc2:""
   }
 ];

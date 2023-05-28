@@ -4,12 +4,12 @@ function ContactItem(props) {
   const { name, imgURL,NIM, desc, desc2 } = props.contact;
   return (
     <div className="contact-item">
-      <h2>{name}</h2>
       <img src={imgURL} alt="" />
-      <h5>{NIM}</h5>
-      <h5>{desc}</h5>
+      <h4>{name}</h4>
+      <h6>{NIM}</h6>
       <p>---------------------------------------</p>
-      <h4>{desc2}</h4>
+      <h5>{desc}</h5>
+      <h5>{desc2}</h5>
     </div>
   );
 }
