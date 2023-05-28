@@ -77,7 +77,7 @@ const Navbar = () => {
 
           <div className='navbar-main-bottom flex align-center justify-between'>
             <div className='navbar-cats-wrapper'>
-              <div className='navbar-cats-btn flex align-center text-white px-2 py-2' onClick={toggleCategory}>
+              <div className='navbar-cats-btn flex align-center text-white py-2' onClick={toggleCategory}>
                 <AiOutlineBars />
                 <span className='text-uppercase mx-3 fs-13'>all categories</span>
                 <BsCaretDownFill />
