@@ -188,3 +188,21 @@
         }
     }
 }
+
+.sc-wrapper{
+    padding-top: 120px;
+}
+
+
+.product-s {
+    &-img {
+      .img-preview {
+        &-zoom {
+          margin-right: auto;
+          margin-left: auto;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  

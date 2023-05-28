@@ -11,6 +11,7 @@ import { BasketContext } from '../../context/basketContext';
 import { AuthContext } from '../../context/authContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import logo from '../../assets/images/Logo.jpeg';
 
 const Navbar = () => {
   const { categories } = useContext(CategoryContext);
@@ -37,35 +38,11 @@ const Navbar = () => {
 
   return (
     <nav className='navbar navbar-fixed'>
-      <div className='navbar-top bg-secondary flex align-center'>
-        <div className='container w-100 flex align-center justify-end'>
-          {authData.isLoggedIn ? (
-            <Link to='/account' className='flex mx-4 align-center justify-end text-dark mx-4'>
-              <FaUser size={14} />
-              <span className='mx-2 fs-13 text-uppercase ls-1'>{authData.info.firstName}</span>
-            </Link>
-          ) : (
-            <Link to='login' className='mx-4 login-btn flex align-center justify-end text-dark'>
-              <FaUser size={14} />
-              <span className='mx-2 fs-13 text-uppercase ls-1'>Login</span>
-            </Link>
-          )}
-
-          <button type='button' onClick={() => logout(authDispatch)} className='flex align-center justify-end text-dark'>
-            <FiLogOut size={14} />
-            <span className='mx-2 fs-13 text-uppercase ls-1' onClick={notify}>
-              logout
-            </span>
-          </button>
-        </div>
-      </div>
-
       <div className='navbar-main bg-primary'>
         <div className='container'>
           <div className='navbar-main-top flex align-center justify-between'>
             <Link to='/' className='navbar-brand'>
-              <span className='text-yellow fs-26 fw-6'>Thrift</span>
-              <span className='text-white fs-26 fw-6'>Trove.</span>
+              <img src={logo} alt="Logo" />
             </Link>
 
             <form className='navbar-search-form'>
@@ -89,7 +66,7 @@ const Navbar = () => {
                 <span className='basket-count flex align-center justify-center'>{authData.isLoggedIn ? itemsCount : '0'}</span>
               </Link>
               <div className='text-end basket-count'>
-                <p className='text-uppercase fs-14'>my cart</p>
+                <p className='text-uppercase fs-14 text-white'>my cart</p>
                 <Link to='/basket' className='fw-7'>
                   $ &nbsp;
                   <span className='basket-amount'>{authData.isLoggedIn ? totalAmount : '0'}</span>
@@ -117,19 +94,35 @@ const Navbar = () => {
                   );
                 })}
               </ul>
-            </div>
 
-            <ul className='navbar-nav flex align-center'>
-              {categories.slice(0, 6).map((category, idx) => {
-                return (
-                  <li className='nav-item' key={idx}>
-                    <Link to={`category/${category}`} className='nav-link no-wrap'>
-                      {category.replace('-', ' ')}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
+            </div>
+            <div className='navbar-top flex align-center'>
+              <div className='container w-100 flex align-center justify-end'>
+
+                <Link to="/about" className="flex align-center justify-end text-white">
+                  <span className="mx-2 fs-13 text-uppercase ls-1">About Us</span>
+                </Link>
+
+                {authData.isLoggedIn ? (
+                  <Link to='/account' className='flex mx-4 align-center justify-end text-white mx-4'>
+                    <FaUser size={14} />
+                    <span className='mx-2 fs-13 text-uppercase ls-1'>{authData.info.firstName}</span>
+                  </Link>
+                ) : (
+                  <Link to='login' className='mx-4 login-btn flex align-center justify-end text-white'>
+                    <FaUser size={14} />
+                    <span className='mx-2 fs-13 text-uppercase ls-1'>Login</span>
+                  </Link>
+                )}
+
+                <button type='button' onClick={() => logout(authDispatch)} className='flex align-center justify-end text-white'>
+                  <FiLogOut size={14} />
+                  <span className='mx-2 fs-13 text-uppercase ls-1' onClick={notify}>
+                    logout
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -140,3 +133,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

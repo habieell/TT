@@ -1,10 +1,22 @@
 @import "../App.scss";
 
-.sc-banner{
-    height: 50vh;
+.sc-banner {
+    position: relative;
+    margin-top: 95px;
+    border-top: 4px solid $clr-yellow;
     overflow: hidden;
+  }
+  
+  .banner-item {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 4px solid $clr-yellow;
-}
+  }
+  
+  .banner-item img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  

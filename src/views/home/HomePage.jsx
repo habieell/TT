@@ -15,12 +15,12 @@ const HomePage = () => {
     return (
         <main className='bg-secondary'>
             <section className='sc-banner'>
-                <div className='banner-item h-100 img-cover'>
+                <div className='banner-item'>
                     <img src = {images.banner_1} alt = "banner_image" className='img-cover' />
                 </div>
             </section>
 
-            <section className='sc-wrapper py-5'>
+            <section className='sc-wrapper'>
                 <Title title={"Our Products"} />
                 {
                     productsLoading 
