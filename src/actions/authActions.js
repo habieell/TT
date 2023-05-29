@@ -1,40 +1,27 @@
-import axios from "../api/axios";
 import { actionType } from "../constants";
 
-export const makeAuthRequest = async(dispatch, loginData) => {
+export const makeAuthRequest = async (dispatch, loginData) => {
     dispatch({ type: actionType.AUTH_REQUEST });
-    try{
-        const { data } = await axios.post(`auth/login`, JSON.stringify(loginData), {
-            headers: { 'Content-Type' : 'application/json'},
-        });
+
+    try {
+        // Replace this with your actual authentication logic
+        // Assuming the authentication is successful, create a userData object with the necessary data
+        const userData = {
+            username: loginData.username,
+        };
 
         dispatch({
-            type: actionType.AUTH_SUCCESS, payload: data
+            type: actionType.AUTH_SUCCESS,
+            payload: userData,
         });
-    } catch(error){
-        if(!error?.response){
-            dispatch({
-                type: actionType.AUTH_ERROR,
-                payload: "No server response!"
-            });
-        }
-
-        if(error.response?.status === 400){
-            dispatch({
-                type: actionType.AUTH_ERROR,
-                payload: "Missing username or password!"
-            });
-        }
-
-        if(error.response?.status === 401){
-            dispatch({
-                type: actionType.AUTH_ERROR,
-                payload: "Unauthorized!"
-            });
-        }
+    } catch (error) {
+        dispatch({
+            type: actionType.AUTH_ERROR,
+            payload: "An error occurred during authentication.",
+        });
     }
-}
+};
 
 export const logout = (dispatch) => {
     dispatch({ type: actionType.LOGOUT });
-}
+};
