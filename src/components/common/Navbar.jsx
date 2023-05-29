@@ -11,7 +11,7 @@ import { BasketContext } from "../../context/basketContext";
 import { AuthContext } from "../../context/authContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import logo from "../../assets/images/Logo.jpeg";
+import logo from "../../assets/images/logott.jpeg";
 
 const Navbar = () => {
   const { categories } = useContext(CategoryContext);
@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar navbar-fixed">
-      <div className="navbar-main bg-primary">
+      <div className="navbar-main bg-black">
         <div className="container">
           <div className="navbar-main-top flex align-center justify-between">
             <Link to="/" className="navbar-brand">
