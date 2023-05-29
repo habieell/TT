@@ -7,6 +7,7 @@ import { PaymentMethods, BasketItem, CheckoutSummary } from '../../components/co
 const BasketPage = () => {
   const { 
     basket, 
+    clearBasket, 
     dispatch: basketDispatch, 
     getCheckoutTotal,
     checkoutTotal,
@@ -54,11 +55,11 @@ const BasketPage = () => {
                 <div className='flex align-center justify-between'>
                   <div className='checkbox-item flex py-3'>
                     <div className='checkbox-icon flex align-center'>
-                      <input type="checkbox" className='form-control' id="checkall" onChange={checkallHandler} checked={checkoutAll} />
+                      <input type = "checkbox" className='form-control' id = "checkall" onChange={ checkallHandler } checked = { checkoutAll } />  
                     </div>
                     <p className='form-text'>Select all items</p>
                   </div>
-                  <button type="button" className='fw-7 fs-16 text-primary' onClick={clearBasket}>Delete</button>
+                  <button type = "button" className='fw-7 fs-16 text-primary' onClick={() => clearBasket(basketDispatch)}>Delete</button>
                 </div>
               </div>
 
@@ -66,7 +67,7 @@ const BasketPage = () => {
                 {
                   basket.map(basketItem => {
                     return (
-                      <BasketItem item={basketItem} key={basketItem.id} />
+                      <BasketItem item = { basketItem } key = { basketItem.id } />
                     )
                   })
                 }
@@ -74,7 +75,7 @@ const BasketPage = () => {
             </div>
             {/* basket right */}
             <div className='basket-r py-4'>
-              <CheckoutSummary checkoutCount={Number(checkoutCount)} checkoutTotal={Number(checkoutTotal)} />
+              <CheckoutSummary checkoutCount = { Number(checkoutCount) } checkoutTotal = { Number(checkoutTotal) } />
               <PaymentMethods />
             </div>
           </div>
@@ -84,4 +85,4 @@ const BasketPage = () => {
   )
 }
 
-export default BasketPage;
+export default BasketPage
