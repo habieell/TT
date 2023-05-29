@@ -60,7 +60,7 @@ const Navbar = () => {
               </div>
             </form>
 
-            <div className='navbar-basket text-white flex align-center'>
+            <div id='navbar-kanan' className='navbar-basket text-white flex align-center'>
               <Link to='/basket' className='basket-btn'>
                 <HiShoppingBag size={29} />
                 <span className='basket-count flex align-center justify-center'>{authData.isLoggedIn ? itemsCount : '0'}</span>
