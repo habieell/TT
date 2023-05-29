@@ -10,6 +10,7 @@ const CheckoutSummary = ({ checkoutCount, checkoutTotal }) => {
     clearBasket();
   };
 
+  
   return (
     <div className="summary bg-white py-3 px-4">
       <h2>Summary</h2>
