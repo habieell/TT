@@ -1,10 +1,13 @@
-import React from "react";
+import { useContext } from "react";
 import PropTypes from "prop-types";
+import { BasketContext } from "../../context/basketContext";
 
-const CheckoutSummary = ({ checkoutCount, checkoutTotal, clearBasket }) => {
+const CheckoutSummary = ({ checkoutCount, checkoutTotal }) => {
+  const { clearBasket, dispatch: basketDispatch } = useContext(BasketContext);
+
   const handleCheckout = () => {
     alert("Checkout success!");
-    clearBasket();
+    clearBasket(basketDispatch);
   };
 
   return (
@@ -30,7 +33,6 @@ const CheckoutSummary = ({ checkoutCount, checkoutTotal, clearBasket }) => {
 CheckoutSummary.propTypes = {
   checkoutCount: PropTypes.number,
   checkoutTotal: PropTypes.number,
-  clearBasket: PropTypes.func.isRequired,
 };
 
 export default CheckoutSummary;
