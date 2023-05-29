@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
+import { BasketContext } from "../../context/basketContext";
 
 const CheckoutSummary = ({ checkoutCount, checkoutTotal }) => {
+  const { clearBasket } = useContext(BasketContext);
+
   const handleCheckout = () => {
     alert("Checkout success!");
-    // Add your checkout logic here
+    clearBasket();
   };
 
   return (
