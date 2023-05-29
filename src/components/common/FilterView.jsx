@@ -32,10 +32,10 @@ const FilterView = () => {
                     <div className='filter-top-view flex align-center '>
                         <p className='op-07 text-whitesmoke fs-13'>View: </p>
                         <button type = "button" className = "grid-btn" onClick={() => setGridView(filterDispatch) } title = "Grid View">
-                            <BsFillGridFill />
+                            <BsFillGridFill color='white'/>
                         </button>
                         <button type = "button" className = "list-btn" onClick={() => setListView(filterDispatch) } title = "List View">
-                            <FaThList />
+                            <FaThList color='white'/>
                         </button>
                     </div>
                 </div>
