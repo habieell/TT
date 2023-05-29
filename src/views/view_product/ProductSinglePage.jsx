@@ -214,7 +214,7 @@ const ProductSinglePage = () => {
                     Add to Cart
                   </button>
                 ) : (
-                  <Link to="login" className="add-to-cart-btn shop-btn fs-14">
+                  <Link to="/login" className="add-to-cart-btn shop-btn fs-14">
                     Add to Cart
                   </Link>
                 )}
