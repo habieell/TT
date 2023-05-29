@@ -184,9 +184,31 @@
         }
         img {
             margin-left: 2vh;
-
-            width: 26vh;
+            width: 24vh;
         }
+
+        .py-2 {
+            margin-left: 0.5vh;
+        }
+
+        .mx-2 {
+            font-size: 2vh;
+            margin-left: 1vh;
+        }
+
+        .mx-3 {
+            margin-left: 0.7vh;
+            margin-right: 0.5vh;
+            font-size: 2vh;
+        }
+        
+        .mx-4 {
+            font-size: 2vh;
+            margin-left: 2.4vh;
+            margin-right: 2.5vh;
+        }
+
+        
 
         .navbar-nav {
             .nav-item {
