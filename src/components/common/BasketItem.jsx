@@ -27,9 +27,7 @@ const BasketItem = ({ item }) => {
     return (
         <div className='basket-list-item grid px-3 py-3' key = {item.id}>
             <div className='checkbox-item py-3'>
-                <div className='checkbox-icon'>
-                <input type = "checkbox" className='form-control' onChange = { singleCheckoutHandler} checked = { item.checkoutStatus} />  
-                </div>
+                
             </div>
 
             <div className='basket-list-item-info grid'>

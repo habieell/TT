@@ -20,9 +20,9 @@ const FilterView = () => {
     return (
         <div className='filter-top'>
             <div className='container'>
-                <div className='filter-top-content py-3 flex align-center justify-between bg-white px-3'>
+                <div className='filter-top-content py-3 flex align-center justify-between bg-primary px-3'>
                     <div className='filter-top-sort flex align-center'>
-                        <p className='fs-13 text-dark'>Sort By:</p>
+                        <p className='fs-13 text-whitesmoke'>Sort By:</p>
                         <select className='fs-13 mx-2 filter-select' onChange={(event) => priceSort(filterDispatch, event.target.value)}>
                             <option defaultValue={constants.BEST_MATCH} value = { constants.BEST_MATCH}>Best Match</option>
                             <option value = {constants.LOW_TO_HIGH}>Price low to high</option>
@@ -30,7 +30,7 @@ const FilterView = () => {
                         </select>
                     </div>
                     <div className='filter-top-view flex align-center '>
-                        <p className='op-07 text-dark fs-13'>View: </p>
+                        <p className='op-07 text-whitesmoke fs-13'>View: </p>
                         <button type = "button" className = "grid-btn" onClick={() => setGridView(filterDispatch) } title = "Grid View">
                             <BsFillGridFill />
                         </button>

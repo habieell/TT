@@ -32,7 +32,7 @@ const HomePage = () => {
     }, [currentImage]);
 
     return (
-        <main className='bg-secondary'>
+        <main className='bg-black'>
             <section className='sc-banner'>
                 <div className='banner-item'>
                     <img src={currentImage} alt="banner_image" className='img-cover' />
