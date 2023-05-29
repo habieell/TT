@@ -4,7 +4,7 @@ import "./AboutUs.css";
 import arip from "./poto/arip.jpg";
 import habil from "./poto/habil.jpeg";
 import rici from "./poto/rici.jpeg";
-import zita from "./poto/arip.jpg";
+import zita from "./poto/zita.jpg";
 
 const Contact = [
   {
@@ -23,10 +23,10 @@ const Contact = [
   },
   {
     name: "Zitaa",
-    imgURL: "",
+    imgURL: zita,
     NIM: "NIM: 00000075267",
-    desc: "--",
-    desc2: "",
+    desc: ".....",
+    desc2: "I have nothing to say, just let me sleep",
   },
   {
     name: "Ricii",
