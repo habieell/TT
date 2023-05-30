@@ -13,15 +13,25 @@ const BasketItem = ({ item }) => {
     removeFromBasket,
     addToCheckout,
     removeFromCheckout,
+    checkoutCount, // Add checkoutCount to the context state
+    checkedItemCount,
   } = useContext(BasketContext);
 
   const singleCheckoutHandler = (event) => {
     if (event.target.checked) {
-      addToCheckout(basketDispatch, item?.id);
+      if (!item.checkoutStatus) {
+        addToCheckout(item.id);
+        basketDispatch({ type: 'INCREMENT_CHECKOUT_COUNT' });
+      }
     } else {
-      removeFromCheckout(basketDispatch, item?.id);
+      if (item.checkoutStatus) {
+        removeFromCheckout(item.id);
+        basketDispatch({ type: 'DECREMENT_CHECKOUT_COUNT' });
+      }
     }
   };
+  
+  
 
   return (
     <div className='basket-list-item grid px-3 py-3' key={item.id}>
