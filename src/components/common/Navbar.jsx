@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import "../../styles/Navbar.scss";
 import { Link } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
@@ -9,8 +9,6 @@ import { AiOutlineBars } from "react-icons/ai";
 import { CategoryContext } from "../../context/categoryContext";
 import { BasketContext } from "../../context/basketContext";
 import { AuthContext } from "../../context/authContext";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import logo from "../../assets/images/logott.jpeg";
 
 const Navbar = () => {
@@ -35,12 +33,14 @@ const Navbar = () => {
     setSearchTerm(event.target.value);
   };
 
-  const notify = () => toast("You are logged out!");
-
   useEffect(() => {
     getBasketTotal(basketDispatch);
     // eslint-disable-next-line
   }, [basket]);
+
+  const notify = () => {
+    toast("You are logged out!");
+  };
 
   return (
     <nav className="navbar navbar-fixed">
@@ -155,26 +155,26 @@ const Navbar = () => {
                   </Link>
                 )}
 
-                <button
-                  type="button"
-                  onClick={() => logout(authDispatch)}
-                  className="flex align-center justify-end text-white"
-                >
-                  <FiLogOut size={14} />
-                  <span
-                    className="mx-2 fs-13 text-uppercase ls-1"
-                    onClick={notify}
+                {authData.isLoggedIn && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      logout(authDispatch);
+                      notify();
+                    }}
+                    className="flex align-center justify-end text-white"
                   >
-                    logout
-                  </span>
-                </button>
+                    <FiLogOut size={14} />
+                    <span className="mx-2 fs-13 text-uppercase ls-1">
+                      logout
+                    </span>
+                  </button>
+                )}
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <ToastContainer />
     </nav>
   );
 };
