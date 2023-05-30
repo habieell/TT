@@ -12,7 +12,7 @@ const Contact = [
     imgURL: arip,
     NIM: "NIM: 00000073943",
     desc: "Bujug sang destroyer",
-    desc2: "Disebelah kanan saya, atasan saya →",
+    desc2: "Disebelah kanan saya, atasan saya →",
   },
   {
     name: "Habieell",
@@ -43,7 +43,30 @@ function AboutUs() {
       <h1>About Us</h1>
       <div className="contact-list">
         {Contact.map((contact) => (
-          <ContactItem key={contact.name} contact={contact} />
+          <div className="card" key={contact.name}>
+            <div className="content">
+              <div className="front">
+                <img className="img" src={contact.imgURL} alt={contact.name} />
+                <div className="front-content">
+                  <div className="badge">Contact</div>
+                  <div className="description">
+                    <div className="title">
+                      <p>{contact.name}</p>
+                      <p>{contact.NIM}</p>
+                    </div>
+                    <p>{contact.desc}</p>
+                    <p>{contact.desc2}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="back">
+                <div className="back-content">
+                  <div className="circle" id="bottom"></div>
+                  <div className="circle" id="right"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     </div>
