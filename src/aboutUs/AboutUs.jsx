@@ -49,7 +49,7 @@ function AboutUs() {
                 <img className="img" src={contact.imgURL} alt={contact.name} />
                 <div className="front-content">
                   <div className="badge">Contact</div>
-                  <div className="description">
+                  <div className="descriptionnn">
                     <div className="title">
                       <p>{contact.name}</p>
                       <p>{contact.NIM}</p>

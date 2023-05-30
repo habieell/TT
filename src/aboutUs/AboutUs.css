@@ -135,7 +135,7 @@ p {
   line-height: 1.4;
 }
 
-img {
+.img {
   margin-top: 2vh;
   text-align: center;
   justify-content: center;
@@ -163,7 +163,7 @@ img {
   width: fit-content;
 }
 
-.description {
+.descriptionnn {
   box-shadow: 0px 0px 10px 5px #00000088;
   width: 100%;
   padding: 10px;
