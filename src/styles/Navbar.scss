@@ -153,6 +153,9 @@
 
     @media screen and (max-width: 576px) {
 
+        .navbar-brand img{
+            width: 100px;
+          }
         .navbar-basket {
             margin-top: 0;
             margin-right: 2vh;
