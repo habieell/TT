@@ -105,7 +105,7 @@ h1 {
   gap: 30px;
 }
 
-.cardAU:hover .content {
+.cardAU:hover .contentAU {
   transform: rotateY(180deg);
 }
 
