@@ -21,17 +21,17 @@ body {
   flex-shrink: 0;
 }
 
-.containerrr{
+.containerFT{
     border-top: 2px dashed rgba(255, 255, 255, 0.2);
 }
 
-.footer-content {
-  .app-links {
+.footer-contentFT {
+  .app-linksFT {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 
-    .app-link {
+    .app-linksFT {
       padding: 4px 10px;
       border-radius: 3px;
       margin-right: 4px;
@@ -61,18 +61,18 @@ body {
   }
 }
 
-.hide-footer {
+.hide-footerFT {
   display: none;
 }
 
 
-.card {
+.cardFT {
   display: flex;
   height: 70px;
   width: 270px;
 }
 
-.card svg {
+.cardFT svg {
   position: absolute;
   display: flex;
   width: 60%;
@@ -85,10 +85,10 @@ body {
   cursor: pointer;
 }
 
-.card .social-link1,
-.card .social-link2,
-.card .social-link3,
-.card .social-link4 {
+.cardFT .social-link1FT,
+.cardFT .social-link2FT,
+.cardFT .social-link3FT,
+.cardFT .social-link4FT {
   position: relative;
   display: flex;
   align-items: center;
@@ -101,11 +101,11 @@ body {
   border-radius: 50px;
 }
 
-.card svg {
+.cardFT svg {
   transform: scale(1);
 }
 
-.card .social-link1:hover {
+.cardFT .social-link1FT:hover {
   background: #f09433;
   background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -114,17 +114,17 @@ body {
   animation: bounce_613 0.4s linear;
 }
 
-.card .social-link2:hover {
+.cardFT .social-link2FT:hover {
   background-color: #00ccff;
   animation: bounce_613 0.4s linear;
 }
 
-.card .social-link3:hover {
+.cardFT .social-link3FT:hover {
   background-color: #5865f2;
   animation: bounce_613 0.4s linear;
 }
 
-.card .social-link4:hover {
+.cardFT .social-link4FT:hover {
   background-color: #12a50b;
   animation: bounce_613 0.4s linear;
 }

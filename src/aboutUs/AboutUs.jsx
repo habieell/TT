@@ -32,8 +32,8 @@ const Contact = [
     name: "Ricii",
     imgURL: rici,
     NIM: "NIM: 00000074763",
-    desc: "aaaaaaaaaaaa",
-    desc2: "Akhirnya bisa tidurrr nyenyak",
+    desc: "oke",
+    desc2: "gudnait",
   },
 ];
 
@@ -41,16 +41,16 @@ function AboutUs() {
   return (
     <div className="about-us">
       <h1>About Us</h1>
-      <div className="contact-list">
+      <div className="contact-listAU">
         {Contact.map((contact) => (
-          <div className="card" key={contact.name}>
-            <div className="content">
-              <div className="front">
-                <img className="img" src={contact.imgURL} alt={contact.name} />
-                <div className="front-content">
-                  <div className="badge">Contact</div>
-                  <div className="descriptionnn">
-                    <div className="title">
+          <div className="cardAU" key={contact.name}>
+            <div className="contentAU">
+              <div className="frontAU">
+                <img className="imgAU" src={contact.imgURL} alt={contact.name} />
+                <div className="front-contentAU">
+                  <div className="badgeAU">Contact</div>
+                  <div className="descriptionAU">
+                    <div className="titleAU">
                       <p>{contact.name}</p>
                       <p>{contact.NIM}</p>
                     </div>
@@ -59,10 +59,10 @@ function AboutUs() {
                   </div>
                 </div>
               </div>
-              <div className="back">
-                <div className="back-content">
-                  <div className="circle" id="bottom"></div>
-                  <div className="circle" id="right"></div>
+              <div className="backAU">
+                <div className="back-contentAU">
+                  <div className="circleAU" id="bottom"></div>
+                  <div className="circleAU" id="right"></div>
                 </div>
               </div>
             </div>
