@@ -125,9 +125,8 @@ const ProductSinglePage = () => {
                   {singleProduct?.images?.map((image, idx) => {
                     return (
                       <div
-                        className={`collection-item ${
-                          previewImg === idx ? "collection-item-active" : ""
-                        }`}
+                        className={`collection-item ${previewImg === idx ? "collection-item-active" : ""
+                          }`}
                         key={idx}
                         onClick={() => setPreviewImg(idx)}
                       >
@@ -155,11 +154,11 @@ const ProductSinglePage = () => {
                 <span className="discounted-price fs-20 fw-7">
                   {singleProduct?.price && singleProduct?.discountPercentage
                     ? formatPrice(
-                        calculateDiscountedPrice(
-                          singleProduct.price,
-                          singleProduct.discountPercentage
-                        )
+                      calculateDiscountedPrice(
+                        singleProduct.price,
+                        singleProduct.discountPercentage
                       )
+                    )
                     : 0}
                 </span>
                 <span className="actual-price text-dark mx-3">
@@ -203,9 +202,15 @@ const ProductSinglePage = () => {
               </div>
 
               <div className="shop-btns">
-                <Link to="/login" className="buy-btn shop-btn fs-14">
+                {authData.isLoggedIn ? (
+                  <Link to="/basket" className="buy-btn shop-btn fs-14">
                   Buy Now
-                </Link>
+                </Link>               
+                ) : (
+                  <Link to="/login" className="buy-btn shop-btn fs-14">
+                    Buy Now
+                  </Link>
+                )}
                 {authData.isLoggedIn ? (
                   <button
                     className="add-to-cart-btn shop-btn fs-14"
@@ -219,6 +224,7 @@ const ProductSinglePage = () => {
                   </Link>
                 )}
               </div>
+
             </div>
           </div>
         </div>
